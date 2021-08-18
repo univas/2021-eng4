@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class>
+	<student>
+		<name>João</name>
+		<cellphone>98821-2837</cellphone>
+		<cpf>092.371.273-33</cpf>
+	</student>
+	<student>
+		<name>Maria</name>
+		<cellphone>98856-0937</cellphone>
+		<cpf>922.822.899-33</cpf>
+	</student>
+	<student>
+		<name>José</name>
+		<cellphone>99927-2357</cellphone>
+		<cpf>122.010.282-33</cpf>
+	</student>
+</class>
