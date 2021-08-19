@@ -7,6 +7,5 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/adapter"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/revisao"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
