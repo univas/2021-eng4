@@ -14,7 +14,7 @@
 
 #Eclipse
 .settings/
-.classpath
-.project
+#.classpath
+#.project
 
 .metadata/
