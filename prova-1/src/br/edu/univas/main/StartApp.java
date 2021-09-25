@@ -1,11 +1,13 @@
 package br.edu.univas.main;
 
+import java.util.List;
 import java.util.Scanner;
 
-import br.edu.univas.vo.Ant;
-import br.edu.univas.vo.Bee;
-import br.edu.univas.vo.Elephant;
-import br.edu.univas.vo.Shark;
+import br.edu.univas.factory.AbstractFactory;
+import br.edu.univas.factory.AnimalClassification;
+import br.edu.univas.factory.AnimalType;
+import br.edu.univas.factory.FactoryProvider;
+import br.edu.univas.vo.Animal;
 
 public class StartApp {
 
@@ -18,20 +20,25 @@ public class StartApp {
 		System.out.println("Digite sua opção:");
 		
 		int option = scanner.nextInt();
+		AbstractFactory abstractFactory = null;
+		List<AnimalType> animalsList = null;
 		
 		if (option == 1) {
-			Elephant elephant = new Elephant();
-			elephant.eat();
+			abstractFactory = FactoryProvider.getFactory(
+					AnimalClassification.VERTEBRATE);
 			
-			Shark shark = new Shark();
-			shark.eat();
+			animalsList = List.of(AnimalType.ELEPHANT, AnimalType.SHARK);
 
 		} else if (option == 2) {
-			Bee bee = new Bee();
-			bee.eat();
+			abstractFactory = FactoryProvider.getFactory(
+					AnimalClassification.INVERTEBRATE);
 			
-			Ant ant = new Ant();
-			ant.eat();
+			animalsList = List.of(AnimalType.ANT,AnimalType.BEE);
+		}
+		
+		for (AnimalType animalType : animalsList) {
+			Animal animal = abstractFactory.createAnimal(animalType);
+			animal.eat();
 		}
 		
 		scanner.close();
