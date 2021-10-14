@@ -6,10 +6,5 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/abstract-factory"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/composite"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/adapter"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/decorator"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/singleton"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
