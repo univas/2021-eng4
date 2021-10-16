@@ -7,16 +7,25 @@ import java.io.IOException;
 
 public class MyLog {
 
+	private static MyLog instance;
 	private final String FILE_NAME = "/home/rodrigo.faria/output/log.txt";
 	private BufferedOutputStream bufferedOutputStream;
 	
-	public MyLog() {
+	private MyLog() {
 		try {
 			FileOutputStream outputStream = new FileOutputStream(FILE_NAME);
 			bufferedOutputStream = new BufferedOutputStream(outputStream);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public synchronized static MyLog getInstance() {
+		if (instance == null) {
+			instance = new MyLog();
+		}
+		
+		return instance;
 	}
 	
 	public void log(String content) throws IOException {

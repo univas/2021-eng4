@@ -10,7 +10,7 @@ public class MyThread extends Thread {
 	private MyLog log;
 	
 	public MyThread(String threadName) throws IOException {
-		log = new MyLog();
+		log = MyLog.getInstance();
 		this.name = threadName;
 		log.log("Creating " + this.name);
 	}
