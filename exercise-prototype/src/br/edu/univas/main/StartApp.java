@@ -21,11 +21,7 @@ public class StartApp {
         circle.setColor("red");
         shapes.add(circle);
 
-        Circle anotherCircle = new Circle();
-        anotherCircle.setX(circle.getX());
-        anotherCircle.setY(circle.getY());
-        anotherCircle.setRadius(circle.getRadius());
-        anotherCircle.setColor(circle.getColor());
+        Circle anotherCircle = (Circle) circle.clone();
         shapesCopy.add(anotherCircle);
 
         Rectangle rectangle = new Rectangle();
@@ -34,10 +30,7 @@ public class StartApp {
         rectangle.setColor("blue");
         shapes.add(rectangle);
         
-        Rectangle anotherRectangle = new Rectangle();
-        rectangle.setWidth(rectangle.getWidth());
-        rectangle.setHeight(rectangle.getHeight());
-        rectangle.setColor(rectangle.getColor());
+        Rectangle anotherRectangle = (Rectangle) rectangle.clone();
         shapesCopy.add(anotherRectangle);
 	}
 }

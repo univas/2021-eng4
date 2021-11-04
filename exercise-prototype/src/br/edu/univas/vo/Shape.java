@@ -5,6 +5,8 @@ public abstract class Shape {
 	protected int x;
 	protected int y;
 	protected String color;
+	
+	public abstract Shape clone();
 
 	public int getX() {
 		return x;
